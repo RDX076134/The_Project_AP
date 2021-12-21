@@ -7,7 +7,7 @@ export default function Landingpage() {
         <div className="LandingPage container-fluid">
             <img alt="HeroBG" className="Herobg" src={herobg} />
                 <h1 className='Title text-secondary fw-normal'>The Project N</h1>
-                <h1 className='date fw-normal'>20th Dec 2021</h1>
+                <h1 className='date fw-normal'>22nd Dec 2021</h1>
                 <div className='dynamic-text text-center'>
                     <div className='line'><div className='line1'>Hey There!</div></div>
                     <div className='line'><div className='line2'>Hola!</div></div>
