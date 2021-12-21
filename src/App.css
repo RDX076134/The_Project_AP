@@ -57,6 +57,14 @@
     letter-spacing: 2px;
     font-weight: 300;
 }
+.message{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-style: italic;
+    letter-spacing: 0px;
+    font-weight: 450;
+}
 @keyframes shine{
     0%{background-position: -400%;}
     100%{background-position: 425%;}
