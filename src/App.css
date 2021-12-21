@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
+/* full-document */
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+@font-face {
+    font-family: "Beach Script";
+    src: url('./Assets/dreambeachdemo.ttf');
+}
+@font-face {
+    font-family: "Maclucash";
+    src: url('./Assets/Maclucash.ttf');
+}
+@font-face {
+    font-family: "DayandLight";
+    src: url('./Assets/Dynalight-Regular.ttf');
+}
+@font-face {
+    font-family: "Neontubes2";
+    src: url('./Assets/NeonTubes2.otf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Preloader */
+.wrapper{
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    color: whitesmoke;
+}
+.wrapper h1{
+    position: absolute;
+    font-style: italic;
+    /* font-size: 1.5em; */
+    font-family:serif;
+    letter-spacing: 2px;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #fff; */
+    background-image: linear-gradient(147deg, #ffd700 45%, #fff 50%, #ffd700 55%);
+    background-size: 80%;
+    background-position:-400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+.wrapper h4{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, 175%);
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+@keyframes shine{
+    0%{background-position: -400%;}
+    100%{background-position: 425%;}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Landing Page */
+.LandingPage{
+    position: relative;
+    margin: 0;
+    padding: 0 !important;
+    height: 100vh;
+    width: 100vw;
+}
+.Herobg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Title{
+    letter-spacing: 0px;
+    position: absolute;
+    display: flex;
+    font-family: "Maclucash";
+    font-size: 1.75em;
+    left: 80px; top: 80px;
+    transform: translateX(-20%) translateY(-50%);
+    font-style: italic;
+}
+.date{
+    letter-spacing: 0px;
+    color: #111;
+    position: absolute;
+    display: flex;
+    font-family: "Maclucash";
+    font-size: 1.75em;
+    right: 80px; top: 80px;
+    transform: translateX(-20%) translateY(-50%);
+    font-style: italic;
+}
+.dynamic-text{
+    color: #fff;
+    letter-spacing: 10px;
+    position: absolute;
+    left: 50%; top: 50%;
+    list-style: none;
+    font-family: "DayandLight";
+    font-size: 8.5em;
+    /* font-weight: 600; */
+    /* font-style: oblique; */
+    transform: translate(-45%, -50%);
+    /* background-color: black; */
+    padding: 0 20px;
+    height: 1.375em;
+    overflow: hidden;
+}
+.line{
+    text-transform: capitalize;
+    line-height: 1.375em;
+    /* opacity: 0; */
+}
+.line:first-child{
+    animation: scroll 10s ease-in-out forwards;
+    animation-delay: 1s;
+}
+.dynamic-text div div:first-child{
+    animation: fade 1.7s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.line1{
+    background-color: #e7eff9;
+    background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.line2{
+    background-color: #e3efe8;
+    background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.line3{
+    background-color: #f3f4f7;
+    background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.line4{
+    background-color: #f1f2f6;
+    background-image: linear-gradient(315deg, #f1f2f6 0%, #c9c6c6 74%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.line5{
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes scroll{
+    0%{
+        margin-top: 0;
+    }
+    16%{
+        margin-top: -1.375em;
+    }
+    33%{
+        margin-top: -2.75em;
+    }
+    50%{
+        margin-top: -4.125em;
+    }
+    66%, 100%{
+        margin-top: -5.5em;
+    }
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    15%, 30%{
+        opacity: 1;
+    }
+    99.99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Neon Animation Section two */
+.pagesec2{
+    width: 100vw; height: 100vh;
+    position: relative;
+    background-color: #142225;
+}
+.pagesec2 .reflect{
+    position: absolute;
+    display: flexbox;
+    left: 50%; top: 50%;
+    font-family: "neontubes2";
+    transform: translate(-50%, -150%);
+    font-weight: 500;
+    font-size: 2.7em;
+    color: #142225;
+    text-transform: uppercase;
+    line-height: 0.85em;
+}
+.pagesec2 #box1::after{
+    display: flex;
+    font-family: "neontubes2";
+    font-weight: 500;
+    content: "Would you like to go out on a";
+    transform: rotateX(180deg);
+    /* background-color: #000; */
+    background-image: linear-gradient(0deg, #142225 1%, transparent 90%);
+    background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.neonanimation{
+    animation: neonglow 4s ease-in-out forwards;
+    animation-delay: 1s;
+}
+@keyframes neonglow{    0%, 18%, 21%, 40%, 50.1%, 60%, 65.1%, 80%, 85.1%, 90.1%, 93%{
+        color: #142225;
+        text-shadow: none;
+    }
+    18.1%, 21.1%, 30%, 40.1%, 50%, 60.1%, 65%, 80.1%, 85%, 90%, 93.1%, 100%{
+        color: whitesmoke;
+        text-shadow: 0 0 10px #03bcf4,
+                    0 0 20px #03bcf4,
+                    0 0 40px #03bcf4,
+                    0 0 80px #03bcf4,
+                    0 0 160px #03bcf4;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+/* Section 2 start */
+
+#svg1{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, 10%);
+}
+#svg1 .path11{
+    stroke-dasharray: 699.112px;
+    stroke-dashoffset: 699.112px;
+}
+#svg1 .path12{
+    stroke-dasharray: 398.467px;
+    stroke-dashoffset: 398.467px;
+}
+#svg1 .path13{
+    stroke-dasharray: 360.35px;
+    stroke-dashoffset: 360.35px;
+}
+#svg1 .path14{
+    stroke-dasharray: 356.07px;
+    stroke-dashoffset: 356.07px;
+}
+#svg1 .path15{
+    stroke-dasharray: 850.6984px;
+    stroke-dashoffset: 850.6984px;
+}
+#svg1 .path16{
+    stroke-dasharray: 242.163px;
+    stroke-dashoffset: 242.163px;
+}
+#svg1 .path17{
+    stroke-dasharray: 956.832px;
+    stroke-dashoffset: 956.832px;
+}
+#svg1 .path18{
+    stroke-dasharray: 935.233px;
+    stroke-dashoffset: 935.233px;
+}
+#svg1 .path19{
+    stroke-dasharray: 503.28px;
+    stroke-dashoffset: 503.28px;
+}
+#svg1 .path20{
+    stroke-dasharray: 352.471px;
+    stroke-dashoffset: 352.471px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes reveal{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+
+/* #footersec */
+.footer{
+    background-color: black;
+}
+p{
+    color: #334;
+    text-transform: capitalize;
+    font-style: italic;
 }

@@ -1,17 +1,32 @@
 {
+  "homepage": "https://rdx076134.github.io/The_Project_N",
   "name": "the_project_n",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.12.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^5.0.2",
+    "chart.js": "^3.4.1",
+    "gsap": "^3.7.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
+    "react-gsap": "^3.2.1",
+    "react-id-swiper": "^4.0.0",
+    "react-media": "^1.10.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "scroll-out": "^2.2.12",
+    "swiper": "^7.0.8",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
